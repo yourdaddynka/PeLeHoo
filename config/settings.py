@@ -39,9 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'daphne',
-    'src.room.apps.RoomConfig',
-    'src.library.apps.LibraryConfig'
+    'src.room.apps.RoomConfig'
 ]
 
 MIDDLEWARE = [
