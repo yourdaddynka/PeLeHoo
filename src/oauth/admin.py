@@ -2,6 +2,6 @@ from django.contrib import admin
 from . import models
 
 
-@admin.register(models.Track)
+@admin.register(models.AuthUser)
 class AuthUserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'album', 'file_path')
+    list_display = ('id', 'email')
