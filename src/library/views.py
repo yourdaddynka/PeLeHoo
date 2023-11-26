@@ -1,12 +1,12 @@
-# from django.shortcuts import render
-from django.http import FileResponse
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, Http404
 from rest_framework import generics, viewsets, parsers, views
 from rest_framework.routers import DefaultRouter
+
 import os
 
 from . import models
-from ..common.utils import IsAuthor
+from src.common.utils import IsAuthor
 from . import serializers
 
 
@@ -23,10 +23,6 @@ class PlayTrack(views.APIView):
     def get(self, request, pk):
         track = get_object_or_404(models.Track, id=pk, private=False)
         if os.path.exists(track.file_path):
-            response = FileResponse(open(track.file_path, 'rb'), content_type='audio/mpeg')
-            response['Content-Disposition'] = f"attachment; filename={track.title}"
-            # print(response['Content-Disposition'])
-            # response['X-Accel-Redirect'] = track.file_path
-            return response
+            return JsonResponse({"title": track.title, "file_path": track.file_path})
         else:
             return Http404
