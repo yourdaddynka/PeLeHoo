@@ -1,22 +1,26 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, Http404
-from rest_framework import generics, viewsets, parsers, views
+from rest_framework import generics, viewsets, parsers, views, serializers
 from rest_framework.routers import DefaultRouter
 
 import os
 
 from . import models
 from src.common.utils import IsAuthor
-from . import serializers
+# from . import serializers
+
+
+class TrackSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Track
+        fields = '__all__'
 
 
 class TrackView(viewsets.ModelViewSet):
+    serializer_class = TrackSerializer
+
     def get_queryset(self):
-        return models.Track.objects.filter(user=self.request.user)
-
-
-# router = DefaultRouter()
-# router.register(r'track', TrackView, basename='track')
+        return models.Track.objects.all()
 
 
 class PlayTrack(views.APIView):

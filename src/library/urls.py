@@ -6,12 +6,9 @@ from django.conf.urls.static import static
 from .views import TrackView
 
 urlpatterns = [
-    path('track/', TrackView.as_view({'get': 'list'})),
+    path('', TrackView.as_view({'get': 'list'})),
     path('track/<int:pk>/', TrackView.as_view(
-        {'get': 'retrieve',
-         # 'put': 'update',
-         # 'delete': 'destroy'
-         })
+        {'get': 'retrieve'})
     )
 ]
 
