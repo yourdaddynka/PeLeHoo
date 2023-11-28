@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.syncmusicchat'
-    compileSdk 32
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.syncmusicchat"
         minSdk 24
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
