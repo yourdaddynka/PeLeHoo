@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff0132"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/text_edit_login"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="login"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_edit_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_sign_continue" />
+
+    <TextView
+        android:id="@+id/label_sign_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="70dp"
+        android:accessibilityLiveRegion="none"
+        android:alpha="0.7"
+        android:clickable="false"
+        android:fontFamily="sans-serif-medium"
+        android:lineSpacingExtra="12sp"
+        android:shadowColor="#797980"
+        android:text="Enter registration details"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textColor="#EAC0C0"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_edit_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_signID" />
+
+    <EditText
+        android:id="@+id/text_edit_password_aggain"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password again"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/button_sign_up"
+        app:layout_constraintEnd_toEndOf="@+id/text_edit_password"
+        app:layout_constraintStart_toStartOf="@+id/text_edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_password" />
+
+    <Button
+        android:id="@+id/button_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#eeeeee"
+        android:fontFamily="sans-serif-medium"
+        android:text="Registration"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/label_pls_reg"
+        app:layout_constraintEnd_toEndOf="@+id/text_edit_password_aggain"
+        app:layout_constraintStart_toStartOf="@+id/text_edit_password_aggain"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_password_aggain" />
+
+    <EditText
+        android:id="@+id/text_edit_password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_edit_password_aggain"
+        app:layout_constraintEnd_toEndOf="@+id/text_edit_login"
+        app:layout_constraintStart_toStartOf="@+id/text_edit_login"
+        app:layout_constraintTop_toBottomOf="@+id/text_edit_login" />
+
+    <TextView
+        android:id="@+id/label_signID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="239dp"
+        android:accessibilityLiveRegion="none"
+        android:clickable="false"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#797980"
+        android:text="Registration"
+        android:textAlignment="textStart"
+        android:textColor="#eeeeee"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/label_sign_continue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_goto_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="150dp"
+        android:backgroundTint="#eeeeee"
+        android:fontFamily="sans-serif-medium"
+        android:text="Login"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/label_pls_reg"
+        app:layout_constraintStart_toStartOf="@+id/label_pls_reg"
+        app:layout_constraintTop_toBottomOf="@+id/label_pls_reg" />
+
+    <TextView
+        android:id="@+id/label_pls_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:accessibilityLiveRegion="none"
+        android:alpha="0.7"
+        android:clickable="false"
+        android:fontFamily="sans-serif-medium"
+        android:shadowColor="#797980"
+        android:text="if you allready have account please login"
+        android:textAlignment="textStart"
+        android:textColor="#eeeeee"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/button_goto_login"
+        app:layout_constraintEnd_toEndOf="@+id/button_sign_up"
+        app:layout_constraintStart_toStartOf="@+id/button_sign_up"
+        app:layout_constraintTop_toBottomOf="@+id/button_sign_up" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
